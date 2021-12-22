@@ -80,9 +80,9 @@ impl FromStr for RebootStep {
 }
 
 #[derive(Debug, Default, Clone)]
-struct Part2(Vec<(i64, Cuboid)>);
+struct Reactor(Vec<(i64, Cuboid)>);
 
-impl Part2 {
+impl Reactor {
     fn nbr_cubes_on(&self) -> i64 {
         self.0
             .iter()
@@ -138,7 +138,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // Execute the reboot steps. Afterward, considering only cubes in the
     // region x=-50..50,y=-50..50,z=-50..50, how many cubes are on?
-    let mut reactor = Part2::default();
+    let mut reactor = Reactor::default();
     for step in reboot_steps
         .iter()
         .filter_map(RebootStep::restrict_to_initialization_area)
@@ -150,7 +150,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // Starting again with all cubes off, execute all reboot steps. Afterward,
     // considering all cubes, how many cubes are on?
-    let mut reactor = Part2::default();
+    let mut reactor = Reactor::default();
     for step in &reboot_steps {
         reactor.apply(step);
     }
