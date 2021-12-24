@@ -30,19 +30,39 @@ const PART2: Situation<4> = Situation {
     rooms: [
         Room {
             colour: AmphipodType::Amber,
-            spots: [Some(AmphipodType::Desert), Some(AmphipodType::Desert), Some(AmphipodType::Desert), Some(AmphipodType::Copper)],
+            spots: [
+                Some(AmphipodType::Desert),
+                Some(AmphipodType::Desert),
+                Some(AmphipodType::Desert),
+                Some(AmphipodType::Copper),
+            ],
         },
         Room {
             colour: AmphipodType::Bronze,
-            spots: [Some(AmphipodType::Desert), Some(AmphipodType::Copper), Some(AmphipodType::Bronze), Some(AmphipodType::Copper)],
+            spots: [
+                Some(AmphipodType::Desert),
+                Some(AmphipodType::Copper),
+                Some(AmphipodType::Bronze),
+                Some(AmphipodType::Copper),
+            ],
         },
         Room {
             colour: AmphipodType::Copper,
-            spots: [Some(AmphipodType::Amber), Some(AmphipodType::Bronze), Some(AmphipodType::Amber), Some(AmphipodType::Bronze)],
+            spots: [
+                Some(AmphipodType::Amber),
+                Some(AmphipodType::Bronze),
+                Some(AmphipodType::Amber),
+                Some(AmphipodType::Bronze),
+            ],
         },
         Room {
             colour: AmphipodType::Desert,
-            spots: [Some(AmphipodType::Amber), Some(AmphipodType::Amber), Some(AmphipodType::Copper), Some(AmphipodType::Bronze)],
+            spots: [
+                Some(AmphipodType::Amber),
+                Some(AmphipodType::Amber),
+                Some(AmphipodType::Copper),
+                Some(AmphipodType::Bronze),
+            ],
         },
     ],
 };
